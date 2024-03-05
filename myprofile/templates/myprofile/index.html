@@ -18,7 +18,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light container my-nav">
       <div class="container-fluid">
-        <a class="navbar-brand text-light" href="#home">Navbar</a>
+        <a class="text-decoration-none h1 text-light" href="#home">Gregory</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -27,14 +27,16 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+            <a class=" active text-light navigation-link footer-link p-3 h3" aria-current="page" href="#home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light" href="#">Link</a>
+            <a class=" active text-light navigation-link footer-link p-3 h3" aria-current="page" href="#aboutme">AboutMe</a>
           </li>
-          
           <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            <a class=" active text-light navigation-link footer-link p-3 h3" aria-current="page" href="#education">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class=" active text-light navigation-link footer-link p-3 h3" aria-current="page" href="#projects">Projects</a>
           </li>
         </ul>
       </div>
@@ -73,6 +75,25 @@
             Am a skilled Website Designer with Experience in codding
                 visually appealing and user friendy websites
           </p>
+          <div class="container">
+            
+              <a class="btn mr-3" 
+              style="
+                background-color: #ff5823; 
+                font-weight: bold; font-family: sans-serif; 
+                font-size: 1.4rem; color: #fff;
+                margin-right: 4rem;
+                " href="">My Resume</a>
+            
+            
+              <a class="btn ml-5" 
+              style="
+              background-color: #ff5823; 
+              font-weight: bold; font-family: sans-serif; 
+              font-size: 1.4rem; color: #fff;
+              "  href="">Hire Me</a>
+            
+          </div>
         </aside>
         <!-- col.// -->
         <aside class="col-lg-5">
@@ -98,12 +119,29 @@
             </aside>
             <!-- col.// -->
             <aside class="col-lg-7">
-              <p>
-                I have achieved much in the career as an Information Technology professional, hold a prestigious Bachelor's Degree in the field and greatly committed to results. I have a strong background in network administration, System Administration as well as software development. My major is web development, and particularly in this field, I am front-end with React and Django for the backend frameworks' specialization. Over the past 1 years, I have honed my skills and expertise in creating dynamic and responsive web applications.
-Looking beyond particular projects, my interest spans further and I am driven with the desire of contributing something meaningful towards the success of my country specifically in the field of technological advancement. Proficient to configure and maintain server environment, implementing advanced security protocols along with leading cross-functional IT teams ensure that I possess the skill set required to enhance efficiency as well as productivity.
-In dynamic field of technology, I remain focused on being ahead of emerging trends and innovation. This ensures that quality IT solutions that are over above the other offers in the market reach the customers in good time.
-It will be a great opportunity for me to use my technical competence as well as top-notch leadership skills. Using my skills, I make it a point to contribute essentially in the technological strides of our nation and hence see to it that the IT scenario of the country always stays ahead in terms of innovation.
-              </p>
+              <p>{{aboutme.paragraph1}} </p>
+              <p>{{aboutme.paragraph2}} </p>
+              <p>{{aboutme.paragraph3}} </p>
+
+              <div class="container">
+            
+                <a class="btn mr-3" 
+                style="
+                  background-color: rgb(8, 8, 58); 
+                  font-weight: bold; font-family: sans-serif; 
+                  font-size: 1.4rem; color: #fff;
+                  margin-right: 4rem;
+                  " href="">My Resume</a>
+              
+              
+                <a class="btn ml-5" 
+                style="
+                background-color: #ff5823; 
+                font-weight: bold; font-family: sans-serif; 
+                font-size: 1.4rem; color: #fff;
+                "  href="">Hire Me</a>
+              
+            </div>
             </aside>
             <!-- col.// -->
           </div>
@@ -115,7 +153,7 @@ It will be a great opportunity for me to use my technical competence as well as 
       <center>
           <h2 class="resume-header">Resume</h2>
       </center>
-      <div class="container mb-3">
+      <div class="container mb-3" id="education" >
           <table class="table">
               <h2 class="head-title" >Education Background</h2>
               <thead>
@@ -152,25 +190,24 @@ It will be a great opportunity for me to use my technical competence as well as 
                  <section class="latest section container">
                       <div class="section-inner shadow-sm rounded">
                           <h2 class="heading">Latest Projects</h2>
-                          <div class="content">    
-                                                 
+                          <div class="content">                        
                               <div class="item featured text-center">
-                                  
+
                                   <div class="featured-image has-ribbon">
-                                      <a href="https://github.com/robert-muriithi/FOOD-DONOR.git" target="_blank">
-                                      <img class="img-fluid project-image rounded shadow-sm" width="200" height="200" src="assets/images/projects/foodonor.jpg" alt="project name" />
+                                      <a href="{{newprojects.github_link}}" target="_blank">
+                                      <img class="img-fluid project-image rounded shadow-sm" width="200" height="200" src="{{newprojects.project_image.url}}" alt="project name" />
                                       </a>
                                       <div class="ribbon">
                                           <div class="text">New</div>
                                       </div>
                                   </div>
                                   
-                                  <h3 class="title mb-3"><a href="https://github.com/robert-muriithi/FOOD-DONOR.git" target="_blank">FOODONOR App</a></h3>
+                                  <h3 class="title mb-3"><a href="{{newprojects.github_link}}" target="_blank">{{newprojects.project_name}}</a></h3>
                                       
                                   <div class="desc text-start">                                    
-                                      <p>This is a food donation android application designed to reduce food wastage by donating excess food to poor or needy people. The ultimate objective of this project is to communicate that investments in food wastage reduction is the most logical step in the pursuit of sustainable production and consumption, including food security, climate change and other adverse environmental effects. </p>
+                                      <p>{{newprojects.project_description}} </p>
                                   </div><!--//desc-->         
-                                  <a class="btn btn-cta-secondary btn-primary" href="https://github.com/robert-muriithi/FOOD-DONOR.git" target="_blank"><i class="fa fa-thumbs-up"></i> View Project on GitHub</a>                 
+                                  <a class="btn btn-cta-secondary btn-primary" href="{{newprojects.github_link}}" target="_blank"><i class="fa fa-thumbs-up"></i> View Project on GitHub</a>                 
                               </div><!--//item-->
                               <hr class="divider" />
                               {% for projects in projects %}
@@ -193,17 +230,20 @@ It will be a great opportunity for me to use my technical competence as well as 
                   
                   <section class="projects section">
                       <div class="section-inner shadow-sm rounded">
-                          <h2 class="heading">Projects Coming Up..</h2>
+                        <h2 class="heading">Projects Coming Up..</h2>
+                        {%for upcomingprojects in upcomingprojects%}
+                          
                           <div class="content">
                               <div class="item">
-                                  <h3 class="title"><a href="https://github.com/robert-muriithi/Bagelly.git" target="_blank">Bagelly</a> <span class="badge badge-theme"></span></h3>
-                                  <p class="summary">A buying and selling app made using kotlin. A user can create his/her own shop online to sell products.</p>
-                                  <p><a class="more-link" href="https://github.com/robert-muriithi/Bagelly.git" target="_blank"><i class="fas fa-external-link-alt"></i>See progress</a></p>
+                                  <h3 class="title"><a href="{{upcomingprojects.github_link}}" target="_blank">{{upcomingprojects.project_name}}</a> <span class="badge badge-theme"></span></h3>
+                                  <p class="summary">{{upcomingprojects.project_description}}</p>
+                                  <p><a class="more-link" href="{{upcomingprojects.github_link}}" target="_blank"><i class="fa fa-external-link-alt"></i>See progress</a></p>
                               </div><!--//item-->
                               
-                              <a class="btn btn-cta-secondary" href="https://github.com/robert-muriithi/">More on GitHub <i class="fas fa-chevron-right pt-1"></i></a>
+                              <a class="btn btn-cta-secondary" href="{{upcomingprojects.github_link}}">More on GitHub <i class="fa fa-chevron-right pt-1"></i></a>
                               
-                          </div><!--//content-->  
+                          </div><!--//content--> 
+                          {%endfor%} 
                       </div><!--//section-inner-->                 
                   </section><!--//section-->
                   
@@ -229,9 +269,9 @@ It will be a great opportunity for me to use my technical competence as well as 
                           <h2 class="heading sr-only">Basic Information</h2>
                           <div class="content">
                               <ul class="list-unstyled">
-                                  <li><i class="fas fa-map-marker-alt"></i><span class="sr-only">Location:</span>Bungoma, Kenya</li>
-                                  <li><i class="fas fa-envelope"></i><span class="sr-only">Email:</span><a href="">njuguiinirobert@gmail.com</a></li>
-                                  <li><i class="fas fa-link"></i><span class="sr-only">Website:</span><a href="">https://github.com/robert-muriithi</a></li>
+                                  <li><i class="fa fa-map-marker-alt"></i><span class="sr-only">Location:</span>Kitale, Kenya</li>
+                                  <li><i class="fa fa-envelope"></i><span class="sr-only">Email:</span><a href="">shangugregory@gmail.com</a></li>
+                                  <li><i class="fa fa-link"></i><span class="sr-only">Website:</span><a href="">https://github.com/gregorymukite</a></li>
                               </ul>
                           </div><!--//content-->  
                       </div><!--//section-inner-->                 
@@ -244,48 +284,17 @@ It will be a great opportunity for me to use my technical competence as well as 
               
                               
                               <div class="skillset">
-                                 
+                                 {% for skills in skills %}
                                   <div class="item">
-                                      <h3 class="level-title">Android Development<span class="level-label"><i class="fas fa-info-circle"></i></span></h3>
+                                      <h3 class="level-title">{{ skills.programing_language }}<span class="level-label"><i class="fa fa-info-circle"></i></span></h3>
                                       <div class="level-bar progress">
-                                          <div class="progress-bar level-bar-inner" role="progressbar" style="width: 93%" aria-valuenow="86"  aria-valuemin="0" aria-valuemax="96"></div>
+                                          <div class="progress-bar level-bar-inner" role="progressbar" style="width: {{skills.learning_progress}}%" aria-valuenow="86"  aria-valuemin="0" aria-valuemax="96"></div>
                                       </div><!--//level-bar-->                                  
                                   </div><!--//item-->
                                   
-                                  <div class="item">
-                                      <h3 class="level-title">Kotlin<span class="level-label"><i class="fas fa-info-circle"></i></span></h3>
-                                      <div class="level-bar progress">
-                                          <div class="progress-bar level-bar-inner" role="progressbar" style="width: 87%" aria-valuenow="86"  aria-valuemin="0" aria-valuemax="96"></div>
-                                      </div><!--//level-bar-->                                  
-                                  </div><!--//item-->
+                                  {% endfor %}
                                   
-                                  <div class="item">
-                                      <h3 class="level-title">Java<span class="level-label"><i class="fas fa-info-circle"></i></span></h3>
-                                      <div class="level-bar progress">
-                                          <div class="progress-bar level-bar-inner" role="progressbar" style="width: 87%" aria-valuenow="86"  aria-valuemin="0" aria-valuemax="96"></div>
-                                      </div><!--//level-bar-->                                  
-                                  </div><!--//item-->
-                                  
-                                  <div class="item">
-                                      <h3 class="level-title">C#<span class="level-label"><i class="fas fa-info-circle"></i></span></h3>
-                                      <div class="level-bar progress">
-                        <div class="progress-bar level-bar-inner" role="progressbar" style="width: 80%" aria-valuenow="86"  aria-valuemin="0" aria-valuemax="96"></div>
-                    </div><!--//level-bar-->                                  
-                                  </div><!--//item-->
-                                  <div class="item">
-                                      <h3 class="level-title">C++<span class="level-label"><i class="fas fa-info-circle"></i></span></h3>
-                                      <div class="level-bar progress">
-                                          <div class="progress-bar level-bar-inner" role="progressbar" style="width: 70%" aria-valuenow="86"  aria-valuemin="0" aria-valuemax="96"></div>
-                                      </div><!--//level-bar-->                                  
-                                  </div><!--//item-->
-                                  <div class="item">
-                                      <h3 class="level-title">Flutter<span class="level-label"><i class="fas fa-info-circle"></i></span></h3>
-                                      <div class="level-bar progress">
-                                          <div class="progress-bar level-bar-inner" role="progressbar" style="width: 50%" aria-valuenow="86"  aria-valuemin="0" aria-valuemax="96"></div>
-                                      </div><!--//level-bar-->                                  
-                                  </div><!--//item-->
-                                  
-                                  <p><a class="more-link" href="https://github.com/robert-muriithi"><i class="fas fa-external-link-alt"></i>More on GitHub</a></p> 
+                                  <p><a class="more-link" href="https://github.com/shangugregory"><i class="fa fa-external-link-alt"></i>More on GitHub</a></p> 
                               </div>              
                           </div><!--//content-->  
                       </div><!--//section-inner-->                 
@@ -305,8 +314,15 @@ It will be a great opportunity for me to use my technical competence as well as 
                                   <h3 class="title">BitBucket</h3>
                               </div><!--//item-->
                               <div class="item">
-                                  <h3 class="title">ClickUp</h3>
-                              </div><!--//item-->
+                                  <h3 class="title">VS Code</h3>
+                              </div>
+                              <div class="item">
+                                <h3 class="title">Post Man</h3>
+                            </div>
+                            <div class="item">
+                              <h3 class="title">Pycharm</h3>
+                          </div>
+                              <!--//item-->
                           </div><!--//content-->
                       </div><!--//section-inner-->
                   </aside><!--//section-->
@@ -320,7 +336,7 @@ It will be a great opportunity for me to use my technical competence as well as 
                               <ul class="list-unstyled">
                                   <li class="item">
                                       <span class="title"><strong>Swahili:</strong></span>
-                                      <span class="level">Native Speaker <br class="visible-xs"/><i class="fas fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </span>
+                                      <span class="level">Native Speaker <br class="visible-xs"/><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </span>
                                   </li><!--//item-->
                                   <li class="item">
                                       <span class="title"><strong>English:</strong></span>
@@ -330,8 +346,28 @@ It will be a great opportunity for me to use my technical competence as well as 
                           </div><!--//content-->
                       </div><!--//section-inner-->
                   </aside><!--//section-->
-                  
-  
+                  <aside class="education aside section">
+                    <div class="section-inner shadow-sm rounded">
+                        <h2 class="heading">Hobies</h2>
+                        <div class="content">
+                            <div class="item">                      
+                                <h5 class="title">Listening To Music</h5>
+                            </div><!--//item-->
+                            <div class="item">
+                                <h3 class="title">Watching Doccumentaries</h3>
+                            </div><!--//item-->
+                            <div class="item">
+                                <h3 class="title">Listening to Motivational speakers</h3>
+                            </div><!--//item-->
+                            <div class="item">
+                              <h3 class="title">Cooking</h3>
+                          </div>
+                            
+                          
+                            <!--//item-->
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </aside>  
                   
                 
               </div><!--//secondary-->    
